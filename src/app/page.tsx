@@ -38,6 +38,7 @@ const mentors: {
   photo: typeof miaPhoto;
   bio: string;
   tags: { label: string; href?: string }[];
+  linkedin?: string;
 }[] = [
   {
     name: "Mia",
@@ -49,6 +50,7 @@ const mentors: {
       { label: "Architect" },
       { label: "Pace Yourself", href: "https://www.youtube.com/@paceyourself_" },
     ],
+    linkedin: "https://www.linkedin.com/in/mia-pacey/",
   },
   {
     name: "Tanya",
@@ -218,6 +220,16 @@ export default function Home() {
                       </ul>
                     )}
                     <p className="mt-3 text-foreground/70">{mentor.bio}</p>
+                    {mentor.linkedin && (
+                      <a
+                        href={mentor.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-auto pt-4 text-sm font-semibold text-pbc-blue-dark hover:underline"
+                      >
+                        Connect on LinkedIn ↗
+                      </a>
+                    )}
                   </div>
                 </Reveal>
               ))}
