@@ -30,16 +30,26 @@ const expectations = [
   },
 ];
 
-const mentors = [
+// Tags are short facts shown as pills. Keep them deliberately different between
+// mentors (e.g. one shows tenure, the other a role) so the cards never read as a
+// side-by-side comparison.
+const mentors: {
+  name: string;
+  photo: typeof miaPhoto;
+  bio: string;
+  tags: string[];
+}[] = [
   {
     name: "Mia",
     photo: miaPhoto,
     bio: "One half of The Handover mentor duo. Hands-on with Claude and Salesforce every day, and focused on turning AI into real, practical efficiency gains.",
+    tags: [],
   },
   {
     name: "Tanya",
     photo: tanyaPhoto,
     bio: "The other half of the duo. Deeply experienced at making Claude work in real Salesforce workflows, and loves helping others get there faster.",
+    tags: [],
   },
 ];
 
@@ -178,7 +188,19 @@ export default function Home() {
                     <h3 className="mt-4 font-display text-xl font-semibold text-foreground">
                       {mentor.name}
                     </h3>
-                    <p className="mt-2 text-foreground/70">{mentor.bio}</p>
+                    {mentor.tags.length > 0 && (
+                      <ul className="mt-3 flex flex-wrap justify-center gap-2">
+                        {mentor.tags.map((tag) => (
+                          <li
+                            key={tag}
+                            className="rounded-full border border-pbc-blue/20 bg-pbc-blue/10 px-3 py-1 text-sm font-medium text-pbc-blue-dark"
+                          >
+                            {tag}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    <p className="mt-3 text-foreground/70">{mentor.bio}</p>
                   </div>
                 </Reveal>
               ))}
