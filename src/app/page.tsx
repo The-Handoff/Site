@@ -30,16 +30,42 @@ const expectations = [
   },
 ];
 
-const mentors = [
+// Tags are short facts shown as pills. Keep them deliberately different between
+// mentors (e.g. one shows tenure, the other a role) so the cards never read as a
+// side-by-side comparison.
+const mentors: {
+  name: string;
+  photo: typeof miaPhoto;
+  location: string;
+  bio: string;
+  tags: { label: string; href?: string }[];
+  linkedin?: string;
+}[] = [
   {
     name: "Mia",
     photo: miaPhoto,
-    bio: "One half of The Handover mentor duo. Hands-on with Claude and Salesforce every day, and focused on turning AI into real, practical efficiency gains.",
+    location: "Sydney",
+    bio: "A dyslexic, big-picture thinker, Mia rebuilt her team's CI/CD pipeline around Claude. Now it writes her PRs and documentation after she ships, so she stays focused on building things that do good.",
+    tags: [
+      { label: "Salesforce MVP" },
+      { label: "Nonprofit" },
+      { label: "Architect" },
+      { label: "Pace Yourself", href: "https://www.youtube.com/@paceyourself_" },
+    ],
+    linkedin: "https://www.linkedin.com/in/mia-pacey/",
   },
   {
     name: "Tanya",
     photo: tanyaPhoto,
-    bio: "The other half of the duo. Deeply experienced at making Claude work in real Salesforce workflows, and loves helping others get there faster.",
+    location: "Melbourne",
+    bio: "A hands-on builder and team leader, Tanya helps businesses uplift their Salesforce and Slack frameworks. She'll show you how to put Claude to work in the place your team already spends its day.",
+    tags: [
+      { label: "Slack Specialist" },
+      { label: "Community Leader" },
+      { label: "Speaker" },
+      { label: "Consultant" },
+    ],
+    linkedin: "https://www.linkedin.com/in/tanya-salesforce/",
   },
 ];
 
@@ -178,7 +204,42 @@ export default function Home() {
                     <h3 className="mt-4 font-display text-xl font-semibold text-foreground">
                       {mentor.name}
                     </h3>
-                    <p className="mt-2 text-foreground/70">{mentor.bio}</p>
+                    <p className="text-sm text-foreground/50">{mentor.location}</p>
+                    {mentor.tags.length > 0 && (
+                      <ul className="mt-3 flex flex-wrap justify-center gap-2">
+                        {mentor.tags.map((tag) => {
+                          const pill =
+                            "rounded-full border border-pbc-blue/20 bg-pbc-blue/10 px-3 py-1 text-sm font-medium text-pbc-blue-dark";
+                          return (
+                            <li key={tag.label}>
+                              {tag.href ? (
+                                <a
+                                  href={tag.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={`${pill} inline-block transition-colors hover:bg-pbc-blue/20`}
+                                >
+                                  {tag.label} ↗
+                                </a>
+                              ) : (
+                                <span className={`${pill} inline-block`}>{tag.label}</span>
+                              )}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
+                    <p className="mt-3 text-foreground/70">{mentor.bio}</p>
+                    {mentor.linkedin && (
+                      <a
+                        href={mentor.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-auto pt-4 text-sm font-semibold text-pbc-blue-dark hover:underline"
+                      >
+                        Connect on LinkedIn ↗
+                      </a>
+                    )}
                   </div>
                 </Reveal>
               ))}
