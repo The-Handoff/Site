@@ -57,6 +57,7 @@ const mentors: {
     photo: tanyaPhoto,
     bio: "The other half of the duo. Deeply experienced at making Claude work in real Salesforce workflows, and loves helping others get there faster.",
     tags: [],
+    linkedin: "https://www.linkedin.com/in/tanya-salesforce/",
   },
 ];
 
