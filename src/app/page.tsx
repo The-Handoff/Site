@@ -110,8 +110,8 @@ export default function Home() {
               A mentorship program for Salesforce professionals
             </p>
             <p className="mx-auto mt-3 max-w-2xl text-lg leading-8 text-foreground/70">
-              Two mentors. Two mentees. Four weeks to get Claude working in your job. You leave
-              with three workflows running, not a list of ideas.
+              Two mentors. Two mentees. Four weeks to get Claude working in your job. Mia and Tanya
+              already use it every day to move faster in Salesforce. Now they&apos;re handing it over.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
