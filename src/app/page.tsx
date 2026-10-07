@@ -106,11 +106,12 @@ export default function Home() {
             <Logo className="mx-auto h-auto w-full max-w-xl drop-shadow-xl sm:max-w-2xl" />
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-foreground/70">
-              Two mentors. Two mentees. One session a week on how you&apos;re really using AI in
-              your Salesforce work, and how you could be using it better. Mia and Tanya use Claude
-              every day to speed up their own work. The Handover is where they pass that on, so you
-              leave with three Claude workflows running in your actual job.
+            <p className="mt-6 text-sm font-semibold uppercase tracking-widest text-pbc-blue-dark">
+              A mentorship program for Salesforce professionals
+            </p>
+            <p className="mx-auto mt-3 max-w-2xl text-lg leading-8 text-foreground/70">
+              Two mentors. Two mentees. Four weeks to get Claude working in your job. Mia and Tanya
+              already use it every day to move faster in Salesforce. Now they&apos;re making The Handover to you.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
