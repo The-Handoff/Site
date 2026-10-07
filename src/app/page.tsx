@@ -43,7 +43,7 @@ const mentors: {
     name: "Mia",
     photo: miaPhoto,
     bio: "One half of The Handover mentor duo. Hands-on with Claude and Salesforce every day, and focused on turning AI into real, practical efficiency gains.",
-    tags: [],
+    tags: ["Salesforce MVP", "Nonprofit", "Architect", "Pace Yourself"],
   },
   {
     name: "Tanya",
