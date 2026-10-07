@@ -332,13 +332,12 @@ export default function Home() {
                   maxLength={80}
                   required
                 />
-                <Field label="City" name="city" autoComplete="address-level2" maxLength={40} />
                 <div className="grid gap-5 sm:grid-cols-2">
                   <Select label="State/Province" name="state_code" options={stateOptions} />
                   <Select label="Country" name="country_code" options={countryOptions} />
                 </div>
                 <Field
-                  label="What's your LinkedIn profile URL?"
+                  label="LinkedIn profile"
                   name="00NQE00000bzmH1"
                   type="url"
                   autoComplete="url"
@@ -349,6 +348,7 @@ export default function Home() {
                     label="How have you used Claude before?"
                     name="00NQE00000bzmSD"
                     options={[
+                      { value: "", label: "Select…" },
                       { value: "Used for work", label: "Used for work" },
                       { value: "Used personally", label: "Used personally" },
                       { value: "Have not tried yet", label: "Have not tried yet" },
@@ -358,35 +358,47 @@ export default function Home() {
                     label="Have you used Claude Code?"
                     name="00NQE00000bzmTp"
                     options={[
+                      { value: "", label: "Select…" },
                       { value: "Yes", label: "Yes" },
                       { value: "No", label: "No" },
                       { value: "Not sure", label: "Not sure" },
                     ]}
                   />
                 </div>
-                <Checkbox
-                  label="Are you currently employed within the Salesforce ecosystem?"
+                <Select
+                  label="Do you use Salesforce in your day-to-day work?"
                   name="00NQE00000bzmLm"
+                  options={[
+                    { value: "", label: "Select…" },
+                    { value: "1", label: "Yes" },
+                    { value: "0", label: "No" },
+                  ]}
                 />
                 <div>
                   <label htmlFor="00NQE00000bzirf" className="block text-sm font-medium text-foreground">
-                    Tell us about your current role
+                    What&apos;s your current role?
                   </label>
                   <textarea
                     id="00NQE00000bzirf"
                     name="00NQE00000bzirf"
-                    rows={3}
+                    rows={2}
+                    placeholder="e.g. Salesforce Admin at a nonprofit, Slack consultant, developer"
                     className="mt-1 w-full rounded-lg border border-black/10 px-3 py-2 text-foreground focus:border-pbc-blue focus:outline-none focus:ring-2 focus:ring-pbc-blue/30"
                   />
                 </div>
                 <div>
                   <label htmlFor="description" className="block text-sm font-medium text-foreground">
-                    Why are you interested?
+                    Why are you interested, and what&apos;s slowing you down at work?
                   </label>
+                  <p className="mt-1 text-sm text-foreground/60">
+                    Tell us the pain points you&apos;d love Claude to take off your plate. We use
+                    this to shape your cohort.
+                  </p>
                   <textarea
                     id="description"
                     name="description"
                     rows={4}
+                    placeholder="e.g. Writing user stories takes hours, I spend every Friday on release notes…"
                     className="mt-1 w-full rounded-lg border border-black/10 px-3 py-2 text-foreground focus:border-pbc-blue focus:outline-none focus:ring-2 focus:ring-pbc-blue/30"
                   />
                 </div>
@@ -474,17 +486,3 @@ function Select({
   );
 }
 
-function Checkbox({ label, name }: { label: string; name: string }) {
-  return (
-    <label htmlFor={name} className="flex items-center gap-2 text-sm font-medium text-foreground">
-      <input
-        id={name}
-        name={name}
-        type="checkbox"
-        value="1"
-        className="h-4 w-4 rounded border-black/20 text-pbc-orange focus:ring-pbc-blue/30"
-      />
-      {label}
-    </label>
-  );
-}
