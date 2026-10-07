@@ -21,8 +21,12 @@ const expectations = [
     body: "We start with how you're using AI today, then look at where Claude could take real load off your Salesforce work.",
   },
   {
-    title: "Built on Claude",
-    body: "Claude is the tool we use every day, and the one Salesforce is building into its own platform. You'll learn the tool your ecosystem is heading towards.",
+    title: "Salesforce + Claude",
+    body: "Our focus is where the two meet: using Claude to build, configure and work in Salesforce faster. It's what we use every day, and it's a natural fit for the ecosystem.",
+  },
+  {
+    title: "Three Workflows, Running",
+    body: "By the end of the four weeks you'll have three Claude workflows running in your actual job. Not notes on what you could try, but things you're already using.",
   },
 ];
 
@@ -49,6 +53,11 @@ const faqs = [
     question: "Who is this for?",
     answer:
       "Anyone using or building Salesforce in their professional life who wants to learn how to bring AI into the way they work. You don't need to be technical or already using Claude.",
+  },
+  {
+    question: "What will I walk away with?",
+    answer:
+      "Three Claude workflows running in your actual Salesforce work, built with Mia and Tanya over the four weeks.",
   },
   {
     question: "How big is each cohort?",
@@ -95,7 +104,8 @@ export default function Home() {
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-foreground/70">
               Two mentors. Two mentees. One session a week on how you&apos;re really using AI in
               your Salesforce work, and how you could be using it better. Mia and Tanya use Claude
-              every day to speed up their own work. The Handover is where they pass that on.
+              every day to speed up their own work. The Handover is where they pass that on, so you
+              leave with three Claude workflows running in your actual job.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
@@ -118,7 +128,11 @@ export default function Home() {
             </Reveal>
             <div className="mt-12 grid gap-6 sm:grid-cols-2">
               {expectations.map((item, i) => (
-                <Reveal key={item.title} delay={i * 0.08}>
+                <Reveal
+                  key={item.title}
+                  delay={i * 0.08}
+                  className={i === expectations.length - 1 && expectations.length % 2 === 1 ? "sm:col-span-2" : undefined}
+                >
                   <div
                     className={`h-full rounded-2xl border p-6 shadow-sm ${
                       i % 2 === 0
