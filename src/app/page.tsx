@@ -58,11 +58,12 @@ const mentors: {
     name: "Tanya",
     photo: tanyaPhoto,
     location: "Melbourne",
-    bio: "Tanya lives where Salesforce meets Slack, and leads the Slack community in Melbourne. She'll show you how to put Claude to work in the place your team already spends its day.",
+    bio: "A hands-on builder and team leader, Tanya helps businesses uplift their Salesforce and Slack frameworks. She'll show you how to put Claude to work in the place your team already spends its day.",
     tags: [
       { label: "Slack Specialist" },
       { label: "Community Leader" },
       { label: "Speaker" },
+      { label: "Consultant" },
     ],
     linkedin: "https://www.linkedin.com/in/tanya-salesforce/",
   },
