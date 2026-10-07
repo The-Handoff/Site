@@ -141,9 +141,9 @@ export default function Home() {
                 >
                   <div
                     className={`h-full rounded-2xl border p-6 shadow-sm ${
-                      i % 2 === 0
-                        ? "border-pbc-blue/20 bg-pbc-blue/5"
-                        : "border-pbc-orange/20 bg-pbc-orange/5"
+                      i === expectations.length - 1
+                        ? "border-2 border-pbc-orange/50 bg-white/80"
+                        : "border-pbc-blue/20 bg-pbc-blue/5"
                     }`}
                   >
                     <h3 className="font-display text-xl font-semibold text-foreground">
