@@ -36,6 +36,7 @@ const expectations = [
 const mentors: {
   name: string;
   photo: typeof miaPhoto;
+  location: string;
   bio: string;
   tags: { label: string; href?: string }[];
   linkedin?: string;
@@ -43,6 +44,7 @@ const mentors: {
   {
     name: "Mia",
     photo: miaPhoto,
+    location: "Sydney",
     bio: "A dyslexic, big-picture thinker, Mia rebuilt her team's CI/CD pipeline around Claude. Now it writes her PRs and documentation after she ships, so she stays focused on building things that do good.",
     tags: [
       { label: "Salesforce MVP" },
@@ -55,6 +57,7 @@ const mentors: {
   {
     name: "Tanya",
     photo: tanyaPhoto,
+    location: "Melbourne",
     bio: "The other half of the duo. Deeply experienced at making Claude work in real Salesforce workflows, and loves helping others get there faster.",
     tags: [],
     linkedin: "https://www.linkedin.com/in/tanya-salesforce/",
@@ -196,6 +199,7 @@ export default function Home() {
                     <h3 className="mt-4 font-display text-xl font-semibold text-foreground">
                       {mentor.name}
                     </h3>
+                    <p className="text-sm text-foreground/50">{mentor.location}</p>
                     {mentor.tags.length > 0 && (
                       <ul className="mt-3 flex flex-wrap justify-center gap-2">
                         {mentor.tags.map((tag) => {
