@@ -9,20 +9,20 @@ import { countryOptions, stateOptions } from "@/data/salesforceLeadOptions";
 
 const expectations = [
   {
-    title: "Mentor Matching",
-    body: "We pair you with a mentor based on your goals and experience so conversations are relevant from session one.",
+    title: "Two Mentors, Two Mentees",
+    body: "Every session is Mia and Tanya with just two mentees. Small enough that the conversation is about your work, not a generic demo.",
   },
   {
-    title: "Structured Program",
-    body: "A defined program length with clear milestones, so you always know what's coming next and what's expected of you.",
+    title: "Four-Week Cohort",
+    body: "One session a week for four weeks. Short enough to commit to, long enough to change how you work.",
   },
   {
-    title: "Regular Sessions",
-    body: "Scheduled 1:1 check-ins to keep momentum, ask questions, and get honest feedback on your progress.",
+    title: "Your Real Work",
+    body: "We start with how you're using AI today, then look at where Claude could take real load off your Salesforce work.",
   },
   {
-    title: "Community Access",
-    body: "Join a wider group of mentees and mentors to swap notes, share wins, and learn beyond your own mentor pairing.",
+    title: "Built on Claude",
+    body: "Claude is the tool we use every day, and the one Salesforce is building into its own platform. You'll learn the tool your ecosystem is heading towards.",
   },
 ];
 
@@ -30,12 +30,12 @@ const mentors = [
   {
     name: "Mia",
     photo: miaPhoto,
-    bio: "One half of The Handover mentor duo — hands-on with Claude every day and focused on turning it into real, practical efficiency gains.",
+    bio: "One half of The Handover mentor duo. Hands-on with Claude and Salesforce every day, and focused on turning AI into real, practical efficiency gains.",
   },
   {
     name: "Tanya",
     photo: tanyaPhoto,
-    bio: "The other half of the duo — deeply experienced at making Claude work for real workflows, and loves helping others get there faster.",
+    bio: "The other half of the duo. Deeply experienced at making Claude work in real Salesforce workflows, and loves helping others get there faster.",
   },
 ];
 
@@ -46,13 +46,18 @@ const faqs = [
       "No — The Handover mentorship program is completely free.",
   },
   {
+    question: "Who is this for?",
+    answer:
+      "Anyone using or building Salesforce in their professional life who wants to learn how to bring AI into the way they work. You don't need to be technical or already using Claude.",
+  },
+  {
     question: "How big is each cohort?",
     answer:
-      "Small and personal. Each session is you plus two or three other mentees, working directly with both Mia and Tanya.",
+      "Small and personal. Each session is you and one other mentee, working directly with both Mia and Tanya.",
   },
   {
     question: "How often do we meet, and for how long?",
-    answer: "Once a week, for an hour, for the length of the program.",
+    answer: "Once a week, for an hour, across a four-week cohort.",
   },
   {
     question: "What timezone are sessions run in?",
@@ -62,7 +67,7 @@ const faqs = [
   {
     question: "Who are the mentors?",
     answer:
-      "Mia and Tanya — both very experienced at making Claude work for them and building more efficient ways of working with it, and keen to help you do the same.",
+      "Mia and Tanya. Both use Claude every day to move faster in their own Salesforce work, and are keen to help you do the same.",
   },
 ];
 
@@ -88,9 +93,9 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-foreground/70">
-              A mentorship program for Salesforce professionals, connecting you with experienced
-              mentors to help you grow. Register your interest below to be considered for the
-              next intake.
+              Two mentors. Two mentees. One session a week on how you&apos;re really using AI in
+              your Salesforce work, and how you could be using it better. Mia and Tanya use Claude
+              every day to speed up their own work. The Handover is where they pass that on.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
