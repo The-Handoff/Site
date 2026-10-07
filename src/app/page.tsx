@@ -42,7 +42,7 @@ const mentors: {
   {
     name: "Mia",
     photo: miaPhoto,
-    bio: "One half of The Handover mentor duo. Hands-on with Claude and Salesforce every day, and focused on turning AI into real, practical efficiency gains.",
+    bio: "A dyslexic, big-picture thinker, Mia rebuilt her team's CI/CD pipeline around Claude. Now it writes her PRs and documentation after she ships, so she stays focused on building things that do good.",
     tags: [
       { label: "Salesforce MVP" },
       { label: "Nonprofit" },
