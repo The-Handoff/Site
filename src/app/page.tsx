@@ -165,17 +165,7 @@ export default function Home() {
               <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-pbc-gold-champagne to-pbc-gold-bronze" />
             </Reveal>
 
-            <Reveal delay={0.1} className="mt-10">
-              <Image
-                src={miaAndTanyaPhoto}
-                alt="Mia and Tanya, The Handover mentors"
-                className="mx-auto rounded-3xl shadow-md"
-                sizes="(min-width: 768px) 700px, 100vw"
-                priority={false}
-              />
-            </Reveal>
-
-            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+                    <div className="mt-10 grid gap-6 sm:grid-cols-2">
               {mentors.map((mentor, i) => (
                 <Reveal key={mentor.name} delay={0.15 + i * 0.1}>
                   <div className="flex h-full flex-col items-center rounded-2xl border border-black/5 bg-white/80 p-6 text-center shadow-sm">
