@@ -17,8 +17,8 @@ const expectations = [
     body: "One session a week for four weeks. Short enough to commit to, long enough to change how you work.",
   },
   {
-    title: "Your Real Work",
-    body: "We start with how you're using AI today, then look at where Claude could take real load off your Salesforce work.",
+    title: "Built Around You",
+    body: "No two cohorts are the same. We shape each one around your level, your use case and the pain points you bring, starting with how you're using AI today.",
   },
   {
     title: "Salesforce + Claude",
@@ -58,6 +58,11 @@ const faqs = [
     question: "What will I walk away with?",
     answer:
       "Three Claude workflows running in your actual Salesforce work, built with Mia and Tanya over the four weeks.",
+  },
+  {
+    question: "Is every cohort the same?",
+    answer:
+      "No. Each cohort is shaped around its two mentees: your experience with AI, how you use Salesforce, and the problems you want solved. That's why the registration form asks about your role and how you've used Claude.",
   },
   {
     question: "How big is each cohort?",
